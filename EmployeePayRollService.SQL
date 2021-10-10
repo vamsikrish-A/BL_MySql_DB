@@ -40,3 +40,16 @@ mysql> show databases;
 
 mysql> use employee_payroll_service;
 Database changed
+
+#UC2--Ability to create employee payroll table int the employe payroll service database.
+
+mysql> create table employee_payroll
+    -> (
+    -> id    int not null Auto_increment,
+    -> name   varchar(100) not null,
+    -> salary  Double not null,
+    -> start   date not null,
+    -> primary key (id)
+    -> );
+Query OK, 0 rows affected (1.61 sec)
+
