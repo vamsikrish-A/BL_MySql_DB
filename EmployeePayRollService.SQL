@@ -73,3 +73,14 @@ mysql> select * from employee_payroll;
 +----+--------------+---------+------------+
 3 rows in set (0.02 sec).
 
+#UC4 ability to retrive data from database.
+mysql> select * from employee_payroll;
++----+--------------+---------+------------+
+| id | name         | salary  | start      |
++----+--------------+---------+------------+
+|  1 | Vamsi        | 1000000 | 2019-10-23 |
+|  2 | pooji        | 2000000 | 2020-05-10 |
+|  3 | vamsikrishna | 3000000 | 2021-10-10 |
++----+--------------+---------+------------+
+3 rows in set (0.02 sec).
+
