@@ -134,4 +134,60 @@ mysql> select * from employee_payroll;
 +----+--------------+--------+---------+------------+
 3 rows in set (0.00 sec)
 
+#UC7-- ability to find SUM, AVG, MIN, MAX.
+
+mysql> select sum(salary) from employee_payroll where gender = 'f' group by gender;
++-------------+
+| sum(salary) |
++-------------+
+|     2000000 |
++-------------+
+1 row in set (0.10 sec)
+
+mysql> select sum(salary) from employee_payroll where gender='m' group by gender;
++-------------+
+| sum(salary) |
++-------------+
+|     4000000 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> update employee_payroll set salary=2000000.00 where name = 'vamsi';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select sum(salary) from employee_payroll where gender='m' group by gender;
++-------------+
+| sum(salary) |
++-------------+
+|     5000000 |
++-------------+
+1 row in set (0.10 sec)
+
+mysql> select avg(salary) from employee_payroll group by name;
++-------------+
+| avg(salary) |
++-------------+
+|     2000000 |
+|     2000000 |
+|     3000000 |
++-------------+
+3 rows in set (0.00 sec)
+
+mysql> select avg(salary) from employee_payroll ;
++--------------------+
+| avg(salary)        |
++--------------------+
+| 2333333.3333333335 |
++--------------------+
+1 row in set (0.02 sec)
+
+mysql> select min(salary) from employee_payroll;
++-------------+
+| min(salary) |
++-------------+
+|     2000000 |
++-------------+
+1 row in set (0.03 sec).
+
 
