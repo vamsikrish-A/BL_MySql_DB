@@ -113,4 +113,25 @@ mysql> select * from employee_payroll;
 +----+--------------+--------+---------+------------+
 3 rows in set (0.00 sec).
 
+#UC6--Ability to add gender Row to Table.
+
+mysql> update employee_payroll set gender = 'm' where name = 'vamsi' or name = 'vamsikrishna'
+    -> ;
+Query OK, 2 rows affected (0.23 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> update employee_payroll set gender = 'f' where name = 'pooji' ;
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from employee_payroll;
++----+--------------+--------+---------+------------+
+| id | name         | gender | salary  | start      |
++----+--------------+--------+---------+------------+
+|  1 | Vamsi        | m      | 1000000 | 2019-10-23 |
+|  2 | pooji        | f      | 2000000 | 2020-05-10 |
+|  3 | vamsikrishna | m      | 3000000 | 2021-10-10 |
++----+--------------+--------+---------+------------+
+3 rows in set (0.00 sec)
+
 
