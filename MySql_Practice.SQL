@@ -49,3 +49,23 @@ mysql> describe employee_payroll
 | start  | date         | NO   |     | NULL    |                |
 +--------+--------------+------+-----+---------+----------------+
 5 rows in set (0.13 sec)
+
+mysql> select * from employee_payroll;
++----+---------------+--------+---------+------------+
+| id | name          | gender | salary  | start      |
++----+---------------+--------+---------+------------+
+|  1 | VAMSI         | M      | 1000000 | 2018-01-03 |
+|  2 | krishna       | F      |  100000 | 2019-02-03 |
+|  3 | vamsi         | M      |  200300 | 2019-03-01 |
+|  4 | vamsi krishna | M      | 3000200 | 2019-04-23 |
++----+---------------+--------+---------+------------+
+4 rows in set (0.00 sec)
+
+mysql> select salary from employee_payroll where name = 'vamsi';
++---------+
+| salary  |
++---------+
+| 1000000 |
+|  200300 |
++---------+
+2 rows in set (0.00 sec)
