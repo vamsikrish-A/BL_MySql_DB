@@ -84,3 +84,33 @@ mysql> select * from employee_payroll;
 +----+--------------+---------+------------+
 3 rows in set (0.02 sec).
 
+#UC5 ability to retrive Particular data from database.
+mysql> select salary from employee_payroll where name = 'vamsi';
++---------+
+| salary  |
++---------+
+| 1000000 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select name from employee_payroll where start between cast('2018-01-01' as date) and date(now());
++--------------+
+| name         |
++--------------+
+| Vamsi        |
+| pooji        |
+| vamsikrishna |
++--------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from employee_payroll;
++----+--------------+--------+---------+------------+
+| id | name         | gender | salary  | start      |
++----+--------------+--------+---------+------------+
+|  1 | Vamsi        | NULL   | 1000000 | 2019-10-23 |
+|  2 | pooji        | NULL   | 2000000 | 2020-05-10 |
+|  3 | vamsikrishna | NULL   | 3000000 | 2021-10-10 |
++----+--------------+--------+---------+------------+
+3 rows in set (0.00 sec).
+
+
